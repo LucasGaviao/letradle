@@ -41,7 +41,7 @@ class _HomeState extends State<Home> {
             ),
           ),
           Text(
-            'Difficulty:',
+            'Dificuldade:',
             style: TextStyle(
               color: Colors.white,
               fontSize: 32,
@@ -57,7 +57,7 @@ class _HomeState extends State<Home> {
               ],),
             ),
           Text(
-            'Word Size:',
+            'Número de Letras:',
             style: TextStyle(
               color: Colors.white,
               fontSize: 32,

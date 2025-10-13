@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:diacritic/diacritic.dart';
 
 class Game extends StatefulWidget {
   final int wordLength;
@@ -32,8 +33,7 @@ class _GameState extends State<Game> {
 
   Future<void> _initializeGame() async {
     final content = await rootBundle.loadString('assets/lexico.txt');
-    final allWords = content.split('\n').map((w) => w.trim().toUpperCase()).toList();
-
+    final allWords = content.split('\n').map((w) => removeDiacritics(w.trim().toUpperCase())).toList();
     final validWords = allWords.where((w) => w.length == widget.wordLength).toList();
     
     _dictionary = Set.from(validWords);
@@ -47,7 +47,7 @@ class _GameState extends State<Game> {
   }
 
   void _submitGuess(String value) {
-    value = value.toUpperCase();
+    value = removeDiacritics(value.toUpperCase());
 
     if (value.length != widget.wordLength) {
       ScaffoldMessenger.of(context).showSnackBar(
