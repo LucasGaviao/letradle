@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:letradle/home.dart';
-import 'package:diacritic/diacritic.dart';
+// import 'package:diacritic/diacritic.dart';
 
 void main() {
-  print("${removeDiacritics("Fácil, gg, mão, água, cachaça, experência!")}");
+  // print("${removeDiacritics("Fácil, gg, mão, água, cachaça, experência!")}");
   runApp(MaterialApp(title: 'LETRADLE',
     home: Home(),
     theme: ThemeData(
