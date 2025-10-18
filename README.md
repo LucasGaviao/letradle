@@ -3,7 +3,7 @@
 
 # Letradle
 
-A word-guessing game inspired by titles like Termo, Letreco, and Wordle, developed in Flutter for Brazilian Portuguese.
+A word-guessing game inspired by titles like Termo, Letroso, and Wordle, developed in Flutter for Brazilian Portuguese.
 
 ## 📜 About the Game
 
